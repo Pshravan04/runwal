@@ -2110,3 +2110,174 @@ footer .elementor-widget-container p {
     width: 100%;
   }
 }
+
+/* Related Properties Section */
+#related-properties {
+    background: linear-gradient(135deg, #fdfdfd 0%, #f4f7f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#related-properties::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: var(--Primary-color);
+    opacity: 0.05;
+    border-radius: 50%;
+}
+
+.property-card {
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08) !important;
+    border-radius: 20px !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.property-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(175, 59, 109, 0.15) !important;
+    border-color: var(--Secondary-color) !important;
+}
+
+.property-img-container {
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+
+.property-img-container .carousel,
+.property-img-container .carousel-inner,
+.property-img-container .carousel-item {
+    height: 100%;
+}
+
+.property-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+/* Custom Carousel Controls */
+.property-card .carousel-control-prev,
+.property-card .carousel-control-next {
+    width: 12%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.property-card:hover .carousel-control-prev,
+.property-card:hover .carousel-control-next {
+    opacity: 1;
+}
+
+.property-card .carousel-control-prev-icon,
+.property-card .carousel-control-next-icon {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    background-size: 50%;
+}
+
+.property-content {
+    padding: 2rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.property-card h4 {
+    color: var(--Primary-color);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.property-card:hover h4 {
+    color: var(--Secondary-color);
+}
+
+.property-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+    color: #555;
+    flex-grow: 1;
+}
+
+.property-details-list li {
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.property-details-list li i {
+    color: var(--Secondary-color);
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.property-price {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--Primary-color);
+    margin-bottom: 1.5rem;
+    padding: 10px 20px;
+    background: rgba(175, 59, 109, 0.05);
+    border-radius: 12px;
+    display: inline-block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.property-card .btn-premium {
+    background: var(--gradient);
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    color: #fff;
+    transition: all 0.3s ease;
+    width: 100%;
+    position: relative;
+}
+
+/* Button Glow Pulse Animation */
+@keyframes btn-glow-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(175, 59, 109, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(175, 59, 109, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(175, 59, 109, 0);
+    }
+}
+
+.pulse-btn {
+    animation: btn-glow-pulse 2s infinite;
+}
+
+.property-card .btn-premium:hover {
+    box-shadow: 0 10px 25px rgba(175, 59, 109, 0.4);
+    transform: scale(1.05);
+    color: #fff;
+}
