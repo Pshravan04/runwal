@@ -22,16 +22,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'rock83694@gmail.com';
-        $mail->Password   = 'eigvmkokcvihyboz';
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'rock83694@gmail.com';
+        $mail->Password = 'eigvmkokcvihyboz';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->Port = 587;
 
         $mail->setFrom('rock83694@gmail.com', 'Website Lead');
-       
-         $mail->addAddress('salesconnect.teambb@gmail.com');
+
+        $mail->addAddress('salesconnect.teambb@gmail.com');
         $mail->addAddress('thegrowthmonks@gmail.com');
         // $mail->addAddress('shravanphutanr@gmail.com');
 
